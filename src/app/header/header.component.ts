@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+
   active:string=""
   headerTop:string=""
 
-
-
-
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
+  
+ 
+
 
   navToTop(){
     this.headerTop="header-top"
@@ -22,5 +23,6 @@ export class HeaderComponent implements OnInit{
   navToMiddle(){
     this.headerTop=""
   }
+ 
 
 }

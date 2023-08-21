@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  active:string=""
+  headerTop:string=""
+
+
+  navToTop(){
+    this.headerTop="header-top"
+  }
+  navToMiddle(){
+    this.headerTop=""
+  }
 }

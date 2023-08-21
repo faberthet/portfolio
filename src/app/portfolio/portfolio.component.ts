@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   
-  showsection:boolean=false
+  show:string=""
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  showSection(){
-    this.showsection=!this.showsection
+    setTimeout(() => {
+      this.show="section-show"        
+    }, 350);
+    
   }
  
 

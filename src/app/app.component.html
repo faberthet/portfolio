@@ -1,9 +1,13 @@
 
-<app-header></app-header>
-<app-portfolio></app-portfolio>
-<router-outlet>
+ <app-header></app-header>
   
-</router-outlet>
+<router-outlet></router-outlet>
 
+
+<!-- {path: 'admin/articles', component: ArticlesAdminComponent, canActivate:[AuthGuardService],
+  children:[  
+    {path: 'actif', component: ArticlesActifComponent},
+    {path: 'inactif', component: ArticlesInactifComponent}]
+  }, -->
 
  
