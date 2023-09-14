@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Techno } from '../models/techno';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -9,12 +11,23 @@ export class PortfolioComponent implements OnInit {
   
   show:string=""
 
+  /**
+   *
+   */
+  constructor() {
+   // testeu();
+    
+  }
+  
   ngOnInit(): void {
+
+    console.log()
     setTimeout(() => {
       this.show="section-show"        
     }, 350);
     
   }
  
+
 
 }

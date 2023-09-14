@@ -187,7 +187,9 @@
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
+
+  
+  window.addEventListener('click', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -209,7 +211,7 @@
         });
       }, true);
     }
-
+  
   });
 
   /**
