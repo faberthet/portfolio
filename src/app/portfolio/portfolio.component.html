@@ -10,17 +10,21 @@
     <div class="row">
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">All</li>
+          <!-- <li data-filter="*" class="filter-active">All</li>
           <li data-filter=".filter-app">App</li>
           <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-web">Web</li> -->
+          <li class="{{allFilter}}" (click)="filter('all')">All</li>
+          <li class="{{angularFilter}}" (click)="filter('angular')">Angular</li>
+          <li class="{{csharpFilter}}" (click)="filter('c#')">C#</li>
+          <li class="{{javaFilter}}" (click)="filter('java')">Java</li>
         </ul>
       </div>
     </div>
 
     <div class="row portfolio-container">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
           <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
@@ -32,22 +36,31 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-        <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
-            <div class="portfolio-links">
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
 
+      <ng-container *ngFor="let project of projects">
+        <ng-container *ngIf="selectedTechno == 'all' || project.languages.includes(selectedTechno)">
+            
+                <!-- <app-projet [project]="project"></app-projet> -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>{{project.name}}</h4>
+                      <p>{{project.info}}</p>
+                      <div class="portfolio-links">
+                        <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                        <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+        </ng-container>
+    </ng-container>
+     
+<!-- 
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
           <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
@@ -144,7 +157,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
 
