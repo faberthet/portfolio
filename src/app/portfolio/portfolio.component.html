@@ -22,16 +22,15 @@
     
       <ng-container *ngFor="let project of projects">
         <ng-container *ngIf="selectedTechno == 'all' || project.languages.includes(selectedTechno)">
-            
-                <!-- <app-projet [project]="project"></app-projet> -->
+          
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                    <img src="assets/images/{{project.picture}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                       <h4>{{project.name}}</h4>
-                      <div class="lien" *ngIf="project.source != ''">> <a href="{{project.source}}">Code source</a> </div>
-                      <div class="lien" *ngIf="project.website != ''">> <a href="{{project.website}}">Site web</a>  </div>
-                      <div class="lien" *ngIf="project.demo != ''">> <a href="{{project.demo}}">Démo</a> </div>
+                      <div class="lien" *ngIf="project.source != ''">> <a href="{{project.source}}" target="_blank">Code source</a> </div>
+                      <div class="lien" *ngIf="project.website != ''">> <a href="{{project.website}}" target="_blank">Site web</a>  </div>
+                      <div class="lien" *ngIf="project.demo != ''">> <a href="{{project.demo}}" target="_blank">Démo</a> </div>
                       
                       <p class="description">description: {{project.info}}</p>
                      
