@@ -23,19 +23,13 @@ export class PortfolioComponent implements OnInit {
                     {name:"java",cssStatut:""}
                   ]
 
-  allFilter:string="filter-active";
-  angularFilter:string="";
-  csharpFilter:string="";
-  javaFilter:string="";
-
   constructor() {}
   
   ngOnInit(): void {
 
-    console.log()
     setTimeout(() => {
       this.show="section-show"        
-    }, 350);
+    }, 200);
     
   }
 
