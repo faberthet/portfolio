@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit{
   headerPosition(){
      this.url=this.router.url
      var page=this.url.split('/').pop();
-     console.log(page)
+    //  console.log(page)
      if(page!=""){
       this.headerTop="header-top"
      }else{
