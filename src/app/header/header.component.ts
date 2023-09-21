@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit{
     {name:"contact",cssStatut:""},
   ]
 
-
   constructor(private router: Router){}
 
   ngOnInit(): void {
@@ -49,7 +48,6 @@ export class HeaderComponent implements OnInit{
       this.navbarStatut="";
     }
   }
-
 
   onClick(name:string){
     this.hideNav()
