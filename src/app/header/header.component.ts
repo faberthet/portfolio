@@ -18,6 +18,13 @@ export class HeaderComponent implements OnInit{
  
   faGithub=faGithub
 
+  sections:{name:string,cssStatut:string}[]=[
+    {name:"home",cssStatut:"active"},
+    {name:"portfolio",cssStatut:""},
+    {name:"contact",cssStatut:""},
+  ]
+
+
   constructor(private router: Router){}
 
   ngOnInit(): void {
@@ -43,8 +50,23 @@ export class HeaderComponent implements OnInit{
     }
   }
 
+
+  onClick(name:string){
+    this.hideNav()
+    this.activateLink(name)
+  }
   hideNav(){
     this.navbarStatut="";
   }
+  activateLink(name:string){
+    for(var i=0;i<this.sections.length; i++){
+      if(this.sections[i].name!=name){
+        this.sections[i].cssStatut="";
+      }else{
+        this.sections[i].cssStatut="active";
+      }
+    }
+  }
+  
  
 }

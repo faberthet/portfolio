@@ -9,12 +9,12 @@
 
       <nav id="navbar" class="navbar {{navbarStatut}}">
         <ul>
-          <li><a class="nav-link active" routerLink="/" (click)="hideNav()">Home</a></li> 
+          <li><a class="nav-link {{sections[0].cssStatut}}" routerLink="/" (click)="activateLink('home')">Home</a></li> 
           <!-- <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#resume">Resume</a></li>
           <li><a class="nav-link" href="#services">Services</a></li> -->
-          <li><a class="nav-link" routerLink="portfolio" (click)="hideNav()">Portfolio</a></li>
-          <li><a class="nav-link" routerLink="contact" (click)="hideNav()">Contact</a></li>
+          <li><a class="nav-link {{sections[1].cssStatut}}" routerLink="portfolio" (click)="activateLink('portfolio')">Portfolio</a></li>
+          <li><a class="nav-link {{sections[2].cssStatut}}" routerLink="contact" (click)="activateLink('contact')">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle" (click)="toggleNav()"></i>
       </nav>
