@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,7 @@ import emailjs from '@emailjs/browser';
 export class ContactComponent implements OnInit {
 
 show:string=""
+faGithub=faGithub
 form: FormGroup = this.fb.group({
   name:'',
   email:'',
@@ -37,5 +39,5 @@ constructor(private fb: FormBuilder) {}
     this.form.reset();
   }
   
-
+// compte de reception d'email: faberthetcontact@gmail.com
 }

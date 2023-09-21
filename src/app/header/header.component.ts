@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Observable, filter, map } from 'rxjs';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,9 @@ export class HeaderComponent implements OnInit{
   headerTop:string=""
 
   url:string=""
+  navbarStatut=""
  
+  faGithub=faGithub
 
   constructor(private router: Router){}
 
@@ -30,6 +33,18 @@ export class HeaderComponent implements OnInit{
      }else{
       this.headerTop=""
      }
+  }
+
+  toggleNav(){
+    if(this.navbarStatut==""){
+      this.navbarStatut="navbar-mobile";
+    }else{
+      this.navbarStatut="";
+    }
+  }
+
+  hideNav(){
+    this.navbarStatut="";
   }
  
 }

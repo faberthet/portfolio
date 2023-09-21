@@ -5,26 +5,28 @@
       <h1><a href="index.html">Fabrice Berthet</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
+      <h2>I'm a software developer<span></span> from Rennes</h2>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar {{navbarStatut}}">
         <ul>
-          <li><a class="nav-link active" routerLink="/">Home</a></li> 
-          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link active" routerLink="/" (click)="hideNav()">Home</a></li> 
+          <!-- <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" routerLink="portfolio">Portfolio</a></li>
-          <li><a class="nav-link" routerLink="contact">Contact</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li> -->
+          <li><a class="nav-link" routerLink="portfolio" (click)="hideNav()">Portfolio</a></li>
+          <li><a class="nav-link" routerLink="contact" (click)="hideNav()">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle" (click)="toggleNav()"></i>
       </nav>
       
 
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://github.com/faberthet" target="_blank" class="twitter"><fa-icon [icon]="faGithub"></fa-icon></a>
+        <a class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+         -->
       </div>
 
     </div>
