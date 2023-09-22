@@ -44,7 +44,7 @@ export const Projects: Project[] = [
         info: 'Mon tout premier projet Angular et Spring Boot. Site web pour l\'auto entreprise Breizh jardin vivant',
         picture:'bjv2.jpg',
         demo:'',//'https://youtu.be/58JBlvOXVvs',
-        website:'https://breizh-jardinvivant.com/'
+        website:''
     },
     {
         name:'Mots croisés',
