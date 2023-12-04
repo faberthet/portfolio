@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit{
   navbarStatut=""
  
   faGithub=faGithub
+  isInit:boolean=false
 
   sections:{name:string,cssStatut:string}[]=[
     {name:"home",cssStatut:"active"},
@@ -28,6 +29,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     this.router.events.subscribe( event => this.headerPosition() )
+    this.isInit=true
   }
   
   headerPosition(){

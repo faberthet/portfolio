@@ -1,2 +1,6 @@
 
-
+body{
+    /* background: #040404 url("assets/images/bg12.jpg") no-repeat;top right */
+    background: radial-gradient(#424242,#000000);
+  background-size: cover;
+}
